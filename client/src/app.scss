@@ -1,0 +1,134 @@
+* {
+    $green-light: #E1FFEE;
+    $blue-light: #7FBCD2;
+    $logo-color: #1C7A9C;
+    $text-color: #000000;
+    $orange: #FF7F3F;
+    $white: #ffffff;
+    $small-screen: 428px;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 10px;
+
+    .App {
+        height: 100vh;
+        width: 100vw;
+        background: linear-gradient(180deg, $green-light, $white);
+        padding: 7rem 9rem;
+        // display: flex;
+        // flex-direction: column;
+
+        .logo {
+            color: $logo-color;
+            font-weight: 1000;
+            font-size: 4rem;
+        }
+
+        .form {
+
+            margin-top: 5rem;
+
+            textarea {
+                width: calc(100vw - 18rem) !important;
+                height: 20rem !important;
+                resize: none;
+                font-size: 16px;
+                padding: 2rem;
+                border: 1px dashed $blue-light;
+                outline: none;
+
+                :hover {
+                    border: 2px solid $blue-light;
+                }
+            }
+
+            .buttons {
+                margin-top: 5rem;
+
+                button {
+                    width: 10rem;
+                    font-size: 16px;
+                    margin-right: 1rem;
+                    cursor: pointer;
+                    border: none;
+                    padding: 0.5rem 0.2rem;
+                    border-radius: 4px;
+                    transition: .2s all ease;
+                }
+                .submit {
+                    background-color: $blue-light;
+                }
+                .reset {
+                    background-color: $orange;
+                }
+
+                :hover {
+                    color: $white;
+                    scale: 1.1;
+                }
+            }
+
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 25px;
+            font-size: 16px;
+            width: calc(100vw - 18rem);
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .copyright {
+                font-size: 16px;
+            } 
+
+            img {
+                position: absolute;
+                height: 4.5rem;
+                right: 0;
+                bottom: -7px;
+            }
+        }
+    }
+
+    @media screen and (max-width: $small-screen) {
+
+        
+        .App {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+
+            .buttons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 12px;
+
+                button {
+                    margin-top: 1rem;
+                }
+            }
+
+            .footer {
+                    img {
+                        margin-left: 10px;
+                        position: relative;
+                        height: 2rem;
+                        bottom: 0px;
+
+                    }
+
+            }
+        }
+    }
+}
