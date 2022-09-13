@@ -1,20 +1,20 @@
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, url_for, request, jsonify
 import pickle
-import numpy as np
+import joblib
 
+filename = 'pickle.pkl'
+clf = pickle.load(open(filename, 'rb'))
+cv = pickle.load(open('tansform.pkl', 'rb')) 
 app = Flask(__name__)
-model = pickle.load(open('all_articles_ondeepANDlearning.pkl', 'rb'))
 
-@app.route("/predict")
-def predict():
-    # raw_features = [x for x in request.form.values()]
-    # processed_features = [np.array(raw_features)]
-    # prediction = model[0].predict(processed_features)
-    # return jsonify(prediction)
+@app.route("/")
+def home:
+    return render_template('home.html)
 
-    print("work under progress...")
-
-
-
+@app.route("/predict", method = ["POST"])
+def predict:
+    if request.method == 'POST'
+       
+                           
 if __name__=="__main__":
     app.run(debug=True)
