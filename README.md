@@ -15,11 +15,19 @@ cd .\client
 yarn dev
 ```
 
-## activating virtual enviornment in python
+## activating virtual enviornment and downloading requirements in python
 
 ### Windows :
 ``` bash
+Set-ExecutionPolicy unrestricted
+```
+``` bash
+pip install virtualenv
+python -m virtualenv env
 .\env\Scripts\activate.ps1
+```
+```bash
+pip install -r requirements.txt
 ```
 
 ## Generating requiremnents.txt
