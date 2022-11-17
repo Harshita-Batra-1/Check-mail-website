@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="thankyou-note">MADE WITH ♥ IN INDIA</div>
       <div className="copyright">COPYRIGHT @ 2020</div>
       <div className="links">
-        <a href={GITHUB}>
+        <a target='blank' href={GITHUB}>
         <svg
           height="32"
           aria-hidden="true"
