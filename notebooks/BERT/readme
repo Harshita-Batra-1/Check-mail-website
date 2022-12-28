@@ -1,0 +1,6 @@
+STEPS done: 
+1. Collecting data 
+2. EDA- Exploratory Data Analysis- to check how data is distributed among two categories- as it is unbalanced we do downsampling. 
+3. Preprocessing of Spam Detection Data - One Hot Encoding Categories Model Creation- Downloading Prerequisites- the bert preprocessor – preprocessor and encoder– main model (layers – 12 , Hidden Layers – 768 and Attention – 12) used Keras Functional API to build our model For the dropout layer, we have set dropout rate 0.1 – 10% 
+Compile our model using adam as our optimizer and binary_crossentropy as our loss function. 
+For metrics, we will use accuracy, precession, recall, and loss
